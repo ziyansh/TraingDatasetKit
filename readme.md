@@ -1,6 +1,6 @@
 # TraingDatasetKit
 
-
+**Version: V1.0.1**
 
 [中文版](readme_cn.md)
 
@@ -10,6 +10,7 @@
 
 ### 🧷 Tagger
 - Single image and batch directory tagging with WD14 models
+- **Auto-interrogate**: Automatically tag images when uploaded
 - Supports WaifuDiffusion ONNX models (`wd14-convnextv2-v2`, `wd14-vit-v2`, `wd14-convnext-v2`, `wd14-swinv2-v2`)
 - DrawWorld Launcher users can find the models in `stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\`
 - Custom model directory scanning with user-defined model names
@@ -126,4 +127,6 @@ Configuration is stored in `app_config.json`:
 
 
 ## Changelog
-V1.0.0 - Initial release
+
+- **V1.0.1** - Added auto-interrogate feature: automatically tag images when uploaded
+- **V1.0.0** - Initial release

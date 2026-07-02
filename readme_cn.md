@@ -1,5 +1,7 @@
 # TraingDatasetKit
 
+**版本: V1.0.1**
+
 [English Version](readme.md)
 
 > 一款用于 AI 训练数据集打标与标签编辑的全能本地工具。后端基于 [wd14-tagger](https://github.com/toriato/stable-diffusion-webui-wd14-tagger) 和 [dataset-tag-editor](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor) 两款 WebUI 扩展开发，完全独立运行，无 WebUI 依赖。
@@ -8,6 +10,7 @@
 
 ### 🧷 Tagger（打标器）
 - 支持单张图片和批量目录打标
+- **自动反推**：上传图片后自动执行打标
 - 支持 WaifuDiffusion ONNX 模型系列（`wd14-convnextv2-v2`, `wd14-vit-v2`, `wd14-convnext-v2`, `wd14-swinv2-v2`）
 - 使用秋葉启动器可以在`stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\` 下找到webUI的模型并导入
 - 自定义模型目录扫描，支持用户自定义模型名称
@@ -124,4 +127,6 @@ wd14-tagger/
 
 
 ## 版本历史
-V1.0.0 - 初始版本
+
+- **V1.0.1** - 新增自动反推功能：上传图片后自动执行打标
+- **V1.0.0** - 初始版本
