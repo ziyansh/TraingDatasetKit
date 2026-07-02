@@ -398,37 +398,37 @@ class TaggerUI:
                 return ['', None, None, '']
 
             submit.click(
-            fn=on_interrogate,
-            inputs=[
-                image,
-                batch_input_glob, batch_input_recursive,
-                batch_output_dir, batch_output_filename_format,
-                batch_output_action_on_conflict,
-                batch_remove_duplicated_tag, batch_output_save_json,
-                self.interrogator_dropdown, threshold,
-                additional_tags, exclude_tags,
-                sort_by_alphabetical_order, add_confident_as_weight,
-                replace_underscore, replace_underscore_excludes, escape_tag,
-                unload_model_after_running
-            ],
-            outputs=[output, ratings, info, info]
-        )
+                fn=on_interrogate,
+                inputs=[
+                    image,
+                    batch_input_glob, batch_input_recursive,
+                    batch_output_dir, batch_output_filename_format,
+                    batch_output_action_on_conflict,
+                    batch_remove_duplicated_tag, batch_output_save_json,
+                    self.interrogator_dropdown, threshold,
+                    additional_tags, exclude_tags,
+                    sort_by_alphabetical_order, add_confident_as_weight,
+                    replace_underscore, replace_underscore_excludes, escape_tag,
+                    unload_model_after_running
+                ],
+                outputs=[output, ratings, info, info]
+            )
 
-        image.change(
-            fn=on_interrogate,
-            inputs=[
-                image,
-                batch_input_glob, batch_input_recursive,
-                batch_output_dir, batch_output_filename_format,
-                batch_output_action_on_conflict,
-                batch_remove_duplicated_tag, batch_output_save_json,
-                self.interrogator_dropdown, threshold,
-                additional_tags, exclude_tags,
-                sort_by_alphabetical_order, add_confident_as_weight,
-                replace_underscore, replace_underscore_excludes, escape_tag,
-                unload_model_after_running
-            ],
-            outputs=[output, ratings, info, info]
-        )
+            image.change(
+                fn=on_interrogate,
+                inputs=[
+                    image,
+                    batch_input_glob, batch_input_recursive,
+                    batch_output_dir, batch_output_filename_format,
+                    batch_output_action_on_conflict,
+                    batch_remove_duplicated_tag, batch_output_save_json,
+                    self.interrogator_dropdown, threshold,
+                    additional_tags, exclude_tags,
+                    sort_by_alphabetical_order, add_confident_as_weight,
+                    replace_underscore, replace_underscore_excludes, escape_tag,
+                    unload_model_after_running
+                ],
+                outputs=[output, ratings, info, info]
+            )
 
         return self
