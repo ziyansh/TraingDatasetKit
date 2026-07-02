@@ -1,7 +1,0 @@
-{
-  "tagger_model_dir": "E:\\StableDiffusion\\stable-diffusion-webUI\\models\\wd-tagger\\wd-eva02-large-tagger-v3",
-  "tags_csv_path": "",
-  "custom_model_names": {},
-  "host": "127.0.0.1",
-  "port": 7000
-}
