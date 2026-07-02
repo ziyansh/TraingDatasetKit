@@ -9,7 +9,7 @@
 ### 🧷 Tagger（打标器）
 - 支持单张图片和批量目录打标
 - 支持 WaifuDiffusion ONNX 模型系列（`wd14-convnextv2-v2`, `wd14-vit-v2`, `wd14-convnext-v2`, `wd14-swinv2-v2`）
-- 使用秋葉启动器可以在`.\stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\` 下找到webUI的模型并导入
+- 使用秋葉启动器可以在`stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\` 下找到webUI的模型并导入
 - 自定义模型目录扫描，支持用户自定义模型名称
 - 标签过滤：阈值控制、排除标签、附加标签、字母排序
 - 标签格式化：替换下划线、转义括号、包含置信度权重
@@ -31,6 +31,7 @@
 - 配置模型扫描目录
 - 自动扫描并发现可用模型
 - 自定义模型命名
+- **Others（其他）**：启动时自动打开浏览器选项
 - 持久化配置（保存至 `app_config.json`）
 
 ## 快速开始
@@ -38,6 +39,7 @@
 ### 前置条件
 - Python 3.10+
 - 手动下载 [WD14 ONNX 模型](https://huggingface.co/SmilingWolf) 并放置于本地目录
+- 或者在中导入webUI中的模型`stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\`（秋葉启动器）
 
 ### 安装
 
@@ -59,6 +61,8 @@ pip install -r requirements.txt
 
 # 运行
 python app.py
+
+# 或者双击 start.bat（仅 Windows）
 ```
 
 在浏览器中打开 http://127.0.0.1:7000
@@ -98,7 +102,8 @@ wd14-tagger/
         "E:/models/wd14-tagger/my-model": "My Custom Model"
     },
     "host": "127.0.0.1",
-    "port": 7000
+    "port": 7000,
+    "open_browser": true
 }
 ```
 
@@ -116,3 +121,7 @@ wd14-tagger/
 - [dataset-tag-editor](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor) - 原始 Dataset Tag Editor WebUI 扩展
 - [SmilingWolf](https://huggingface.co/SmilingWolf) - WD14 模型训练
 - [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) - Stable Diffusion WebUI
+
+
+## 版本历史
+V1.0.0 - 初始版本

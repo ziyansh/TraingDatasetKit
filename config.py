@@ -42,6 +42,8 @@ class AppConfig:
         # ---- 通用配置 ----
         self.host: str = "127.0.0.1"
         self.port: int = 7000
+        # 是否自动打开浏览器
+        self.open_browser: bool = True
         
         # 加载已有配置
         self.load()
@@ -70,6 +72,7 @@ class AppConfig:
             "custom_model_names": self.custom_model_names,
             "host": self.host,
             "port": self.port,
+            "open_browser": self.open_browser,
         }
         with open(self.config_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
@@ -86,6 +89,7 @@ class AppConfig:
                 self.custom_model_names = data.get("custom_model_names", {})
                 self.host = data.get("host", "127.0.0.1")
                 self.port = data.get("port", 7000)
+                self.open_browser = data.get("open_browser", True)
                 print(f"[Config] Configuration loaded from {self.config_path}")
             except Exception as e:
                 print(f"[Config] Failed to load config: {e}")

@@ -1,5 +1,7 @@
 # TraingDatasetKit
 
+
+
 [中文版](readme_cn.md)
 
 > An all-in-one local tool for AI training dataset tagging and editing. Backend based on [wd14-tagger](https://github.com/toriato/stable-diffusion-webui-wd14-tagger) and [dataset-tag-editor](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor) webui extensions, standalone with no webui dependency.
@@ -9,7 +11,7 @@
 ### 🧷 Tagger
 - Single image and batch directory tagging with WD14 models
 - Supports WaifuDiffusion ONNX models (`wd14-convnextv2-v2`, `wd14-vit-v2`, `wd14-convnext-v2`, `wd14-swinv2-v2`)
-- DraWorld Launcher users can find the models in `.\stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\`
+- DrawWorld Launcher users can find the models in `stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\`
 - Custom model directory scanning with user-defined model names
 - Tag filtering: threshold, exclude, additional tags, alphabetical sort
 - Tag formatting: replace underscores, escape brackets, include confidence weights
@@ -31,6 +33,7 @@
 - Configure model scan directory
 - Scan and discover models automatically
 - Rename models with custom names
+- **Others**: Option to auto-open browser on startup
 - Persistent configuration (saved to `app_config.json`)
 
 ## Quick Start
@@ -38,12 +41,13 @@
 ### Prerequisites
 - Python 3.10+
 - [Download WD14 ONNX models](https://huggingface.co/SmilingWolf) manually and place them in a local directory
+- Or import models from webUI cache (`stable-diffusion-webUI\.cache\sdwebuilauncher\hfmirror\refs\SmilingWolf\`) (DrawWorld Launcher)
 
 ### Installation
 
 ```bash
 # Clone or download the project, then:
-cd TraingDatasetKit-AIO
+cd TraingDatasetKit
 
 # Create virtual environment
 python -m venv venv
@@ -59,6 +63,8 @@ pip install -r requirements.txt
 
 # Run
 python app.py
+
+# Or double-click start.bat (Windows only)
 ```
 
 Open http://127.0.0.1:7000 in your browser.
@@ -93,12 +99,13 @@ Configuration is stored in `app_config.json`:
 
 ```json
 {
-    "tagger_model_dir": "E:/models/wd14-tagger",
+    "tagger_model_dir": "X:/models/wd14-tagger",
     "custom_model_names": {
         "E:/models/wd14-tagger/my-model": "My Custom Model"
     },
     "host": "127.0.0.1",
-    "port": 7000
+    "port": 7000,
+    "open_browser": true
 }
 ```
 
@@ -116,3 +123,7 @@ Configuration is stored in `app_config.json`:
 - [dataset-tag-editor](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor) - Original Dataset Tag Editor webui extension
 - [SmilingWolf](https://huggingface.co/SmilingWolf) - WD14 model training
 - [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) - Stable Diffusion WebUI
+
+
+## Changelog
+V1.0.0 - Initial release

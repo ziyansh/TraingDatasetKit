@@ -53,6 +53,14 @@ def create_settings_ui(interrogator_dropdown=None):
                 )
         
         with gr.Row():
+            with gr.Column():
+                gr.Markdown("## Others")
+                cb_open_browser = gr.Checkbox(
+                    label='Open browser automatically on startup',
+                    value=app_config.open_browser
+                )
+        
+        with gr.Row():
             btn_save_config = gr.Button(value='Save Config')
             btn_refresh_tagger = gr.Button(value='Refresh Tagger Models')
         
@@ -84,9 +92,10 @@ def create_settings_ui(interrogator_dropdown=None):
             msg = f'Found {len(models)} model(s) in {directory}'
             return data, msg
         
-        def save_config_fn(directory: str, models_data):
+        def save_config_fn(directory: str, models_data, open_browser: bool):
             """保存配置，包括自定义模型名称"""
             app_config.tagger_model_dir = directory
+            app_config.open_browser = open_browser
             
             custom_names = {}
             if models_data:
@@ -105,9 +114,10 @@ def create_settings_ui(interrogator_dropdown=None):
                 msg += f', Custom names: {len(custom_names)} models'
             return msg
         
-        def refresh_tagger_fn(directory: str, models_data):
+        def refresh_tagger_fn(directory: str, models_data, open_browser: bool):
             """刷新 Tagger 模型列表，保存自定义名称"""
             app_config.tagger_model_dir = directory
+            app_config.open_browser = open_browser
             
             custom_names = {}
             if models_data:
@@ -145,7 +155,7 @@ def create_settings_ui(interrogator_dropdown=None):
         
         btn_save_config.click(
             fn=save_config_fn,
-            inputs=[tb_model_dir, df_models],
+            inputs=[tb_model_dir, df_models, cb_open_browser],
             outputs=[txt_status]
         )
         
@@ -155,7 +165,7 @@ def create_settings_ui(interrogator_dropdown=None):
         
         btn_refresh_tagger.click(
             fn=refresh_tagger_fn,
-            inputs=[tb_model_dir, df_models],
+            inputs=[tb_model_dir, df_models, cb_open_browser],
             outputs=outputs_list
         )
     
