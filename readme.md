@@ -1,6 +1,6 @@
 # TraingDatasetKit
 
-**Version: V1.0.1**
+**Version: V1.1.0**
 
 [中文版](readme_cn.md)
 
@@ -29,6 +29,13 @@
 - Move or delete files
 - CLIP token count display
 - Full UTKF (Undo/Redo) support
+
+### 📷 PNG Info
+- Read Stable Diffusion generation parameters from images
+- **PNG support**: Reads parameters from tEXt chunk (key: `parameters`)
+- **JPG support**: Reads parameters from UserComment EXIF field
+- Left-right layout: upload on left, parameters display on right
+- Auto-detect and parse when image is uploaded
 
 ### ⚙️ Settings
 - Configure model scan directory
@@ -128,5 +135,6 @@ Configuration is stored in `app_config.json`:
 
 ## Changelog
 
+- **V1.1.0** - Added PNG Info page: read Stable Diffusion generation parameters from PNG/JPG images
 - **V1.0.1** - Added auto-interrogate feature: automatically tag images when uploaded
 - **V1.0.0** - Initial release

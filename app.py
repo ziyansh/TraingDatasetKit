@@ -33,6 +33,7 @@ from dataset_tag_editor.tag_editor_ui import ui_instance as ui
 from dataset_tag_editor.tag_editor_ui.ui_common import dte_instance, dte_module
 from tagger.ui import TaggerUI
 from settings_ui import create_settings_ui
+from png_info.ui import PngInfoUI
 
 # ================================================================
 # 配置定义（与原始扩展保持一致）
@@ -337,11 +338,12 @@ if __name__ == '__main__':
     
     dte_ui = create_dataset_tag_editor_ui()
     settings_ui = create_settings_ui(tagger_ui_instance.interrogator_dropdown)
+    png_info_ui = PngInfoUI().create_ui()
     
     # 使用 TabbedInterface 组合
     app = gr.TabbedInterface(
-        [tagger_ui, dte_ui, settings_ui],
-        ["🧷 Tagger", "✏️ Dataset Tag Editor", "⚙️ Settings"],
+        [tagger_ui, dte_ui, png_info_ui, settings_ui],
+        ["🧷 Tagger", "✏️ Dataset Tag Editor", "📷 PNG Info", "⚙️ Settings"],
         title="Local Tag Editor & Tagger"
     )
     

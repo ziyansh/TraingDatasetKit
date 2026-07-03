@@ -11,7 +11,7 @@ __pycache__/
 *.pyd
 *.log
 
-# 数据集/大模型文件（你项目3万+文件，不要上传）
+# 数据集/大模型文件
 dataset/
 *.safetensors
 *.bin
@@ -30,3 +30,4 @@ Thumbs.db
 *.bak
 
 app_config.json
+resources/

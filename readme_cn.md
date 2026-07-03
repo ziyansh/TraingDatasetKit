@@ -1,6 +1,6 @@
 # TraingDatasetKit
 
-**版本: V1.0.1**
+**版本: V1.1.0**
 
 [English Version](readme.md)
 
@@ -29,6 +29,13 @@
 - 移动或删除文件
 - CLIP token 计数显示
 - 完整的撤销/重做支持
+
+### 📷 PNG Info（图片信息读取器）
+- 读取图片中的 Stable Diffusion 生成参数
+- **PNG 支持**：从 tEXt chunk（键名：`parameters`）读取
+- **JPG 支持**：从 UserComment EXIF 字段读取
+- 左右布局：左侧上传图片，右侧显示参数
+- 上传图片后自动解析
 
 ### ⚙️ Settings（设置）
 - 配置模型扫描目录
@@ -128,5 +135,6 @@ wd14-tagger/
 
 ## 版本历史
 
+- **V1.1.0** - 新增 PNG Info 页面：读取 PNG/JPG 图片中的 Stable Diffusion 生成参数
 - **V1.0.1** - 新增自动反推功能：上传图片后自动执行打标
 - **V1.0.0** - 初始版本
