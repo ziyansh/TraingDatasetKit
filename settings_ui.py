@@ -120,7 +120,7 @@ def create_settings_ui(interrogator_dropdown=None):
             app_config.open_browser = open_browser
             
             custom_names = {}
-            if models_data:
+            if models_data is not None and not models_data.empty:
                 for row in models_data:
                     if len(row) >= 3 and row[1]:
                         path = row[1]

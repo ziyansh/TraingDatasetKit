@@ -1,6 +1,6 @@
 # TraingDatasetKit
 
-**Version: V1.1.0**
+**Version: V1.1.1**
 
 [中文版](readme_cn.md)
 
@@ -135,6 +135,7 @@ Configuration is stored in `app_config.json`:
 
 ## Changelog
 
+- **V1.1.1** - Fixed ValueError in Settings page when refreshing tagger models
 - **V1.1.0** - Added PNG Info page: read Stable Diffusion generation parameters from PNG/JPG images
 - **V1.0.1** - Added auto-interrogate feature: automatically tag images when uploaded
 - **V1.0.0** - Initial release

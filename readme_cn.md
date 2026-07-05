@@ -1,6 +1,6 @@
 # TraingDatasetKit
 
-**版本: V1.1.0**
+**版本: V1.1.1**
 
 [English Version](readme.md)
 
@@ -135,6 +135,7 @@ wd14-tagger/
 
 ## 版本历史
 
+- **V1.1.1** - 修复 Settings 页面刷新 Tagger 模型时的 ValueError 错误（pandas DataFrame 真值判断问题）
 - **V1.1.0** - 新增 PNG Info 页面：读取 PNG/JPG 图片中的 Stable Diffusion 生成参数
 - **V1.0.1** - 新增自动反推功能：上传图片后自动执行打标
 - **V1.0.0** - 初始版本
